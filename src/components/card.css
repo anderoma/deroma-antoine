@@ -1,19 +1,27 @@
 .row{
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -1rem;
+    margin: 0 -0.5rem;
+}
+
+.d-flex{
+    display: flex;
+}
+.m-auto{
+    margin: auto;
 }
 
 .card{
     border: none;
     padding: 36px 42px;
     border-radius: 32px;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
     background-color: #ffffff;
+    height: 280px;
 }
 
 .col{
-    padding: 0 1rem;
+    padding: 0 0.5rem;
 }
 .col-6 {
     flex: 0 0 auto;
@@ -21,5 +29,9 @@
 }
 .col-3 {
     flex: 0 0 auto;
-    width: 50%;
+    width: 25%;
+}
+
+.text-center{
+    text-align: center;
 }

@@ -13,10 +13,17 @@ class CardTemplate extends React.Component {
         {blocks &&
           blocks.map(({ node: block }) => (
             <div className={`col ${block.frontmatter.size}`}>
-                <div className="card">
-                    <h2>{block.frontmatter.title}</h2>
-                    <div dangerouslySetInnerHTML={{ __html: block.html }}></div>
-                </div>
+                
+                {block.frontmatter.bgcolor 
+                    ?<div className="card d-flex" style={{backgroundColor: `#${block.frontmatter.bgcolor}`}}>
+                        <div className="m-auto" dangerouslySetInnerHTML={{ __html: block.html }}></div>
+                    </div>
+                    :<div className="card">
+                        <h2>{block.frontmatter.title}</h2>
+                        <div dangerouslySetInnerHTML={{ __html: block.html }}></div>
+                    </div>
+                }
+                
             </div>
           ))}
       </div>
@@ -46,6 +53,7 @@ export default function Card() {
                   rank
                   size
                   title
+                  bgcolor
                 }
                 html
               }
