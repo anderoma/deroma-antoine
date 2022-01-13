@@ -2,31 +2,37 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
+
+
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `rebeccapurple`,
       marginBottom: `1.45rem`,
     }}
   >
     <div
       style={{
+        display: `flex`,
         margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        maxWidth: 1200,
+        padding: `1rem`,
       }}
     >
       <h1 style={{ margin: 0 }}>
         <Link
           to="/"
           style={{
-            color: `white`,
+            fontSize: `1.5rem`,
+            color: `#333`,
             textDecoration: `none`,
           }}
         >
           {siteTitle}
         </Link>
       </h1>
+
+      <p className="m-auto">{new Date().getHours()} : {new Date().getMinutes()}</p>
+
     </div>
   </header>
 )

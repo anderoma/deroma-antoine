@@ -9,7 +9,6 @@ import Card from "../components/card"
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
-    <h1>Hi people</h1>
     
 
     <Card />
