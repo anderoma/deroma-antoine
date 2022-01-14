@@ -12,19 +12,21 @@ class CardTemplate extends React.Component {
       <div className="row">
         {blocks &&
           blocks.map(({ node: block }) => (
-            <div className={`col ${block.frontmatter.size}`}>
-                
+            
+            <div className={`col ${block.frontmatter.width}`} key={block.id}>
+    
                 {block.frontmatter.bgcolor 
-                    ?<div className="card d-flex" style={{backgroundColor: `#${block.frontmatter.bgcolor}`}}>
+                    ?<div className={`card d-flex ${block.frontmatter.height}`} style={{backgroundColor: `#${block.frontmatter.bgcolor}`}}>
                         <div className="m-auto" dangerouslySetInnerHTML={{ __html: block.html }}></div>
                     </div>
-                    :<div className="card">
+                    :<div className={`card ${block.frontmatter.height}`}>
                         <h2>{block.frontmatter.title}</h2>
                         <div dangerouslySetInnerHTML={{ __html: block.html }}></div>
+                        
                     </div>
                 }
-                
             </div>
+            
           ))}
       </div>
     )
@@ -49,9 +51,11 @@ export default function Card() {
         {
             edges {
               node {
+                id
                 frontmatter {
                   rank
-                  size
+                  width
+                  height
                   title
                   bgcolor
                 }

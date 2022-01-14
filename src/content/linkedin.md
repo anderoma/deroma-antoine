@@ -1,6 +1,7 @@
 ---
 title: linkedin
-size: col-3
+width: col-3
+height: h-1
 rank: 2
 bgcolor: 0A66C2
 ---

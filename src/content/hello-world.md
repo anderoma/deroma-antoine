@@ -1,6 +1,7 @@
 ---
 title: hello world
-size: col-3
+width: col-3
+height: h-2
 rank: 3
 bgcolor:
 ---

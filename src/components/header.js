@@ -31,6 +31,8 @@ const Header = ({ siteTitle }) => (
 
       <p className="m-auto">{new Date().getHours()} : {new Date().getMinutes()}</p>
 
+      <div id="time"></div>
+
     </div>
   </header>
 )

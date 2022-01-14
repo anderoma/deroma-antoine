@@ -1,6 +1,7 @@
 ---
 title: test
-size: col-12
+width: col-6
+height: h-1
 rank: 4
 bgcolor:
 ---
