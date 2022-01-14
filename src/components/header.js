@@ -2,6 +2,8 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
+import Time from "./time"
+
 const Header = ({ siteTitle }) => (
   <header
     style={{
@@ -29,9 +31,7 @@ const Header = ({ siteTitle }) => (
         </Link>
       </h1>
 
-      <p className="m-auto">{new Date().getHours()} : {new Date().getMinutes()}</p>
-
-      <div id="time"></div>
+      <Time />
 
     </div>
   </header>
