@@ -1,5 +1,5 @@
 ---
-title: test
+title: wordpress
 width: col-6
 height: h-1
 rank: 4

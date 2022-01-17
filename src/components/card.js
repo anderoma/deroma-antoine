@@ -4,27 +4,24 @@ import { graphql, StaticQuery } from "gatsby"
 
 import "./card.css"
 
+
 class CardTemplate extends React.Component {
   render() {
     const { data } = this.props
     const { edges: blocks } = data.allMarkdownRemark
     return (
-      <div className="row">
+      <div className="grid">
         {blocks &&
           blocks.map(({ node: block }) => (
             
-            <div className={`col ${block.frontmatter.width}`} key={block.id}>
+            <div className={`card ${block.frontmatter.width} ${block.frontmatter.height}`} key={block.id}
+            style={{backgroundColor: `#${block.frontmatter.bgcolor}`}}>
     
-                {block.frontmatter.bgcolor 
-                    ?<div className={`card d-flex ${block.frontmatter.height}`} style={{backgroundColor: `#${block.frontmatter.bgcolor}`}}>
-                        <div className="m-auto" dangerouslySetInnerHTML={{ __html: block.html }}></div>
-                    </div>
-                    :<div className={`card ${block.frontmatter.height}`}>
+                
                         <h2>{block.frontmatter.title}</h2>
                         <div dangerouslySetInnerHTML={{ __html: block.html }}></div>
                         
-                    </div>
-                }
+                
             </div>
             
           ))}

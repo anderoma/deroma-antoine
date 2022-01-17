@@ -1,11 +1,12 @@
 ---
-title: linkedin
+title: 
 width: col-3
 height: h-1
 rank: 2
 bgcolor: 0A66C2
 ---
 
+<div class="center-absolute">
 <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 34 34" class="global-nav__logo">
 <title>
 LinkedIn
@@ -15,4 +16,5 @@ LinkedIn
 </path>
 </g>
 </svg>
+</div>
     
