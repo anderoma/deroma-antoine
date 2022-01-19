@@ -1,22 +1,17 @@
 import * as React from "react"
-import Helmet from "react-helmet"
-import { withPrefix, Link } from "gatsby"
+import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import Card from "../components/card"
+import MyFirstGrid from "../components/grid"
 
 const IndexPage = () => (
   <Layout>
 
-    <Helmet>
-      <script src={withPrefix('jquery.min.js')} type="text/javascript" rel="preload" />
-      <script src={withPrefix('packery-docs.min.js')} type="text/javascript" rel="preload" />
-    </Helmet>
+
     <Seo title="Home" />
     
-
-    <Card />
+    <MyFirstGrid />
 
     
     <p>

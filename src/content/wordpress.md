@@ -1,7 +1,7 @@
 ---
 title: wordpress
-width: col-6
-height: h-1
+width: 6
+height: 1
 rank: 4
 bgcolor:
 ---

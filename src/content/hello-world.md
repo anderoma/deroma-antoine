@@ -1,7 +1,7 @@
 ---
 title:
-width: col-3
-height: h-2
+width: 3
+height: 2
 rank: 3
 bgcolor:
 ---

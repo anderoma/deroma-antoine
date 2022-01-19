@@ -17,7 +17,7 @@ img[alt="Profil"]{
 }
 
 .card{
-    float: left;
+    
     border: none;
     padding: 36px 42px;
     border-radius: 32px;
@@ -29,8 +29,8 @@ img[alt="Profil"]{
 .card:hover {
     cursor: grab;
 }
-.packery-drop-placeholder {
-    background-color: rgba(0, 0, 0, 0.04);
+.react-grid-item.react-grid-placeholder {
+    background-color: rgba(0, 0, 0, 0.4);
     border-radius: 32px;
     outline-offset: -6px;
     -webkit-transition: -webkit-transform 0.2s;
@@ -55,4 +55,3 @@ img[alt="Profil"]{
 .h-1{
     height: 280px;
 }
-

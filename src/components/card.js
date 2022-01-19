@@ -23,6 +23,7 @@ class CardTemplate extends React.Component {
                         
                 
             </div>
+
             
           ))}
       </div>
