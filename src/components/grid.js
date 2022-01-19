@@ -32,8 +32,8 @@ class MyFirstGrid extends React.Component {
                 
                 <div className="card" key={block.id}
                 data-grid={{ 
-                    x: (`${block.frontmatter.rank}` % 12),
-                    y: (`${block.frontmatter.rank}` % 12),
+                    x: ((`${block.frontmatter.rank}` * `${block.frontmatter.width}`) % 12),
+                    y: ((`${block.frontmatter.rank}` * `${block.frontmatter.height}`) % 12),
                     w: (`${block.frontmatter.width}` * 1),
                     h: (`${block.frontmatter.height}` * 1),
                     isResizable:false }}
