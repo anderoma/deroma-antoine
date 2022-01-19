@@ -26,16 +26,18 @@ class MyFirstGrid extends React.Component {
             rowHeight={280}
             width={1200}
             >
+            
             {blocks &&
               blocks.map(({ node: block }) => (
                 
                 <div className="card" key={block.id}
                 data-grid={{ 
-                    x: (`${block.frontmatter.rank}` * `${block.frontmatter.width}`) % 12,
-                    y: (`${block.frontmatter.rank}` * `${block.frontmatter.height}`) % 12,
+                    x: (`${block.frontmatter.rank}` % 12),
+                    y: (`${block.frontmatter.rank}` % 12),
                     w: (`${block.frontmatter.width}` * 1),
-                    h: (`${block.frontmatter.height}` * 1) ,
-                    isResizable:false }}>
+                    h: (`${block.frontmatter.height}` * 1),
+                    isResizable:false }}
+                style={{backgroundColor: `#${block.frontmatter.bgcolor}`}}>
                     
                     <h2>{block.frontmatter.title}</h2>
                     <div dangerouslySetInnerHTML={{ __html: block.html }}></div>
