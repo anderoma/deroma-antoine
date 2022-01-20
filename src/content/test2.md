@@ -2,7 +2,8 @@
 title: test2
 width: 3
 height: 1
-rank: 6
+xrank: 4
+yrank: 4
 bgcolor:
 ---
 

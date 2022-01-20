@@ -21,7 +21,6 @@ class MyFirstGrid extends React.Component {
         return (
             <ReactGridLayout
             className="layout"
-            
             cols={12}
             rowHeight={280}
             width={1200}
@@ -32,8 +31,8 @@ class MyFirstGrid extends React.Component {
                 
                 <div className="card" key={block.id}
                 data-grid={{ 
-                    x: ((`${block.frontmatter.rank}` * `${block.frontmatter.width}`) % 12),
-                    y: ((`${block.frontmatter.rank}` * `${block.frontmatter.height}`) % 12),
+                    x: (`${block.frontmatter.xrank}` * 1),
+                    y: (`${block.frontmatter.yrank}` * 1),
                     w: (`${block.frontmatter.width}` * 1),
                     h: (`${block.frontmatter.height}` * 1),
                     isResizable:false }}
@@ -57,13 +56,13 @@ export default function Grid() {
           query={graphql`
         query MyQuery {
             allMarkdownRemark
-            (sort: {order: ASC, fields: [frontmatter___rank]}) 
             {
                 edges {
                   node {
                     id
                     frontmatter {
-                      rank
+                      xrank
+                      yrank
                       width
                       height
                       title

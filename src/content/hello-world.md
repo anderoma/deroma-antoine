@@ -2,7 +2,8 @@
 title:
 width: 3
 height: 2
-rank: 3
+xrank: 9
+yrank: 0
 bgcolor:
 ---
 

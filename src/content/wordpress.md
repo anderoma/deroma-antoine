@@ -2,7 +2,8 @@
 title: wordpress
 width: 6
 height: 1
-rank: 4
+xrank: 5
+yrank: 5
 bgcolor:
 ---
 
