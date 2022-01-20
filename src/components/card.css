@@ -8,6 +8,25 @@ img[alt="Profil"]{
     height: 100px;
     border-radius: 50%;
 }
+img[alt="Milenefizel.com"]{
+    height: 100%;
+    object-fit: cover;
+    margin: -36px -42px;
+}
+
+.Outils img{
+    width: 60px;
+    margin: auto;
+}
+
+.about h2{
+    display: none;
+}
+
+.card>div{
+    height: 100%;
+    width: 100%;
+}
 
 .center-absolute{
     position: absolute;
@@ -17,7 +36,7 @@ img[alt="Profil"]{
 }
 
 .card{
-    
+
     border: none;
     padding: 36px 42px;
     border-radius: 32px;
@@ -28,7 +47,10 @@ img[alt="Profil"]{
 }
 .card:hover {
     cursor: grab;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+    transition: box-shadow 0.5s;
 }
+
 .react-grid-item.react-grid-placeholder {
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 32px;

@@ -5,6 +5,7 @@ height: 1
 xrank: 6
 yrank: 0
 bgcolor: 0A66C2
+bgimg:
 ---
 
 <a href="https://www.linkedin.com/in/antoine-deroma-b79576153/">

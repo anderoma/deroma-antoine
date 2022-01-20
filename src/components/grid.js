@@ -8,10 +8,9 @@ import "/node_modules/react-resizable/css/styles.css"
 import "./grid.css"
 import "./card.css"
 
+import { Responsive, WidthProvider } from "react-grid-layout";
 
-import RGL, { WidthProvider } from "react-grid-layout";
-
-const ReactGridLayout = WidthProvider(RGL);
+const ResponsiveGridLayout = WidthProvider(Responsive);
 
 class MyFirstGrid extends React.Component {
     
@@ -19,17 +18,17 @@ class MyFirstGrid extends React.Component {
         const { data } = this.props
         const { edges: blocks } = data.allMarkdownRemark
         return (
-            <ReactGridLayout
+            <ResponsiveGridLayout
             className="layout"
-            cols={12}
+            cols={{ md: 12, sm: 6, xs: 4, xxs: 2 }}
             rowHeight={280}
-            width={1200}
+            breakpoints={{ md: 996, sm: 768, xs: 480, xxs: 0 }}
             >
             
             {blocks &&
               blocks.map(({ node: block }) => (
                 
-                <div className="card" key={block.id}
+                <div className={`card ${block.frontmatter.title}`} key={block.id}
                 data-grid={{ 
                     x: (`${block.frontmatter.xrank}` * 1),
                     y: (`${block.frontmatter.yrank}` * 1),
@@ -44,7 +43,7 @@ class MyFirstGrid extends React.Component {
                 </div>
   
               ))}
-          </ReactGridLayout>
+          </ResponsiveGridLayout>
         )
       }
     }
@@ -67,6 +66,7 @@ export default function Grid() {
                       height
                       title
                       bgcolor
+                      bgimg
                     }
                     html
                   }
